@@ -2,6 +2,8 @@ import { z } from 'zod'
 import { roleSchema } from '../roles.js'
 
 export const userSchema = z.object({
+  __typename: z.literal('User').default('User'),
+  id: z.string(),
   role: roleSchema,
 })
 
