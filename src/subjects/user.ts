@@ -3,6 +3,7 @@ import { userSchema } from '../models/user.js'
 
 export const userSubject = z.tuple([
   z.union([
+    z.literal('get'),
     z.literal('create'),
     z.literal('update'),
     z.literal('delete'),
